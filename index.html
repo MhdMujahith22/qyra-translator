@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Qyra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="bg"></canvas>
+
+  <!-- Welcome message -->
+  <div id="welcome" class="welcome">
+    <div class="welcome-card">
+      <div class="welcome-glow"></div>
+      <h2 class="welcome-title">Hi, I am Qyra</h2>
+      <p class="welcome-text">
+        Speak in one language and hear the translation in another.
+        Tap the orb to start speaking, or say "Hey Qyra".
+      </p>
+      <button id="startBtn" class="welcome-btn">Start</button>
+    </div>
+  </div>
+
+  <!-- Translator panel -->
+  <div class="scene" id="scene">
+    <main class="card" id="card">
+      <div class="border-run"></div>
+      <div class="sheen"></div>
+
+      <div class="content">
+        <div class="handle"></div>
+
+        <div class="lang-row">
+          <div class="dd" id="fromDd"></div>
+          <button id="swapBtn" class="swap-btn" aria-label="Swap languages">⇄</button>
+          <div class="dd" id="toDd"></div>
+        </div>
+
+        <!-- Original text appears on the left and translated text on the right -->
+        <div class="output">
+          <div class="col col-left">
+            <p class="label">Original</p>
+            <p id="original" class="text">...</p>
+          </div>
+          <div class="col col-right">
+            <p class="label">Translated</p>
+            <p id="translated" class="text translated">...</p>
+          </div>
+        </div>
+
+        <div class="mic-section">
+          <div class="mic-wrap" id="micWrap">
+            <span class="ring"></span>
+            <span class="ring r2"></span>
+            <button id="micBtn" class="mic" aria-label="Tap to speak">
+              <span class="gif-wrap">
+                <img src="orb.gif" class="mic-gif" alt="">
+                <span class="rgb-layer"></span>
+              </span>
+            </button>
+          </div>
+          <button id="clearBtn" class="clear-btn hidden">
+            <span class="clear-label">Clear</span>
+          </button>
+        </div>
+
+        <p id="status" class="status">Tap Qyra to speak</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
